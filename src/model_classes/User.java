@@ -66,4 +66,14 @@ public class User {
 		this.password = password;
 		return true;
 	}
+	
+	/**
+	 * Verify user has valid credentials
+	 * @param username
+	 * @param password
+	 * @return true if valid credentials, false otherwise
+	 */
+	public boolean verifyCredentials(String username, String password) {
+		return  this.username.equals(username) && this.password.equals(password);
+	}
 }
