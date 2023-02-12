@@ -1,46 +1,47 @@
-package user_tests;
+package notecard_tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import model_classes.Notecard;
 import model_classes.User;
 
 class TestConstructor {
 
 	@Test
-	void testNullUsername() {
+	void testNullTerm() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			new User(null, "$!detergent12!$");
+			new User(null, "This is the definition");
 		});
 	}
 
 	@Test
-	void testEmptyUsername() {
+	void testEmptyTerm() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			new User("", "$!detergent12!$");
+			new User("", "This is the definition");
 		});
 	}
 
 	@Test
-	void testNullPassword() {
+	void testNullDefinition() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			new User("Mr Clean", null);
+			new User("Term", null);
 		});
 	}
 
 	@Test
-	void testEmptyPassword() {
+	void testEmptyDefinition() {
 		assertThrows(IllegalArgumentException.class, () -> {
-			new User("Mr Clean", "");
+			new User("Term", "");
 		});
 	}
 
 	@Test
 	void testValidConstructor() {
-		User user = new User("Mr Clean", "$!detergent12!$");
-		assertEquals("Mr Clean", user.GetUsername(), "username is valid");
-		assertEquals("$!detergent12!$", user.GetPassword(), "password is valid");
+		Notecard notecard = new Notecard("Term", "This is the definition");
+		assertEquals("Term", notecard.getTerm(), "term is valid");
+		assertEquals("This is the definition", notecard.getDefinition(), "definition is valid");
 	}
 }
