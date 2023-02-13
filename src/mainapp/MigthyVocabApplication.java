@@ -28,8 +28,7 @@ public class MigthyVocabApplication extends Application {
 	 * 
 	 * @pre none
 	 * @post none
-	 * @param args
-	 *            Not used
+	 * @param args Not used
 	 */
 	public static void main(String[] args) {
 		launch(args);
