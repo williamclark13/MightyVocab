@@ -1,16 +1,19 @@
 package model_classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Notecards {
-	private ObservableList<Notecard> notecards;
+	private List<Notecard> notecards;
 
 	/**
 	 * Instantiates an instance of a collectible of notecard
 	 */
 	public Notecards() {
-		this.notecards = FXCollections.observableArrayList();
+		this.notecards = new ArrayList<Notecard>();
 	}
 
 	/**
@@ -18,7 +21,7 @@ public class Notecards {
 	 * 
 	 * @return get the notecards
 	 */
-	public ObservableList<Notecard> getNotecards() {
+	public List<Notecard> getNotecards() {
 		return this.notecards;
 	}
 
@@ -50,7 +53,7 @@ public class Notecards {
 	 * @param notecard
 	 * @return true if successfully added, false otherwise
 	 */
-	public boolean addNotecards(ObservableList<Notecard> notecards) {
+	public boolean addNotecards(List<Notecard> notecards) {
 		if (notecards == null) {
 			return false;
 		}
@@ -76,7 +79,7 @@ public class Notecards {
 	 * @param unwantedNotecards
 	 * @return true if removed, false otherwise
 	 */
-	public boolean removeNotecards(ObservableList<Notecard> unwantedNotecards) {
+	public boolean removeNotecards(List<Notecard> unwantedNotecards) {
 		if (unwantedNotecards == null) {
 			return false;
 		}
