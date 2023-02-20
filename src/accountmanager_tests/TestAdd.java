@@ -39,6 +39,7 @@ class TestAdd {
 		
 		boolean result =  testManager.add(testUser, testValue); // Why won't it pass when creating object in line
 		
+		assertEquals(1, testManager.size());
 		assertEquals(false, result);
 	}
 	
@@ -50,6 +51,7 @@ class TestAdd {
 		
 		boolean result =  testManager.add(testUser, testValue);
 		
+		assertEquals(1, testManager.size());
 		assertEquals(true, result);
 	}
 	
@@ -63,14 +65,17 @@ class TestAdd {
 		
 		boolean result =  testManager.add(testUser1, testValue);
 		assertEquals(true, result);
+		int actual = testManager.size();
+		assertEquals(1, actual);
 		
 		result =  testManager.add(testUser2, testValue);
 		assertEquals(true, result);
 		
+		
 		result =  testManager.add(testUser3, testValue);
 		assertEquals(true, result);
 		
-		int actual = testManager.size();
+		actual = testManager.size();
 		assertEquals(3, actual);
 	}
 
