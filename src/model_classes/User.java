@@ -83,4 +83,9 @@ public class User {
 	public boolean verifyCredentials(String username, String password) {
 		return this.username.equals(username) && this.password.equals(password);
 	}
+	
+	@Override
+	public String toString() {
+		return this.username + resources.ResourceMessages.SEPARATOR + this.password;
+	}
 }
