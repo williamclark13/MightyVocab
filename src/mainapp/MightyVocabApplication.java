@@ -6,13 +6,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class MigthyVocabApplication extends Application {
+public class MightyVocabApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/.fxml"));
+			loader.setLocation(getClass().getResource("../view/LoginPage.fxml"));
 			Pane pane = loader.load();
 			Scene scene = new Scene(pane);
 			primaryStage.setScene(scene);
