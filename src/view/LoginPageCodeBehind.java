@@ -1,5 +1,6 @@
 package view;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -32,5 +33,15 @@ public class LoginPageCodeBehind {
 	private void initialize() {
 
 	}
+	
+    @FXML
+    void userLogin(ActionEvent event) {
+    	
+    }
+	
+    @FXML
+    void goToCreateAccountPage(ActionEvent event) {
+    	
+    }
 
 }

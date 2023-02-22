@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CreateAccountPageCodeBehind">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="960.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="22.0" text="MightyVocab" textFill="#7b69d6">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="302.9" layoutY="22.0" text="MightyVocab" textFill="#7b69d6">
                <font>
                   <Font name="Harlow Solid Italic" size="64.0" />
                </font>
             </Label>
-            <Label layoutX="361.0" layoutY="172.0" text="Create a new account.">
+            <Label layoutX="368.2" layoutY="172.0" text="Create a new account.">
                <font>
                   <Font name="Cambria" size="24.0" />
                </font>
@@ -47,12 +47,12 @@
                   <Font name="Cambria" size="18.0" />
                </font>
             </PasswordField>
-            <Button fx:id="createAccountButton" layoutX="403.0" layoutY="452.0" mnemonicParsing="false" text="Create Account">
+            <Button fx:id="createAccountButton" layoutX="409.6" layoutY="452.0" mnemonicParsing="false" onAction="#userCreateAccount" text="Create Account">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Hyperlink fx:id="loginpageHyperlink" layoutX="368.0" layoutY="565.0" text="I already have an account.">
+            <Hyperlink fx:id="loginpageHyperlink" layoutX="374.8" layoutY="565.0" onAction="#goToLoginPage" text="I already have an account.">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
