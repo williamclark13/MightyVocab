@@ -1,15 +1,26 @@
 package view;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model_classes.Notecard;
 
 public class NotecardsPageCodeBehind {
+
+	private Stage stage;
+	private Scene scene;
+	private Parent root;
 
 	@FXML
 	private Button addToSetButton;
