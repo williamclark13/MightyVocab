@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CreateAccountPageCodeBehind">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="960.0">
          <children>
@@ -52,7 +52,7 @@
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Hyperlink fx:id="loginpageHyperlink" layoutX="368.0" layoutY="565.0" text="I already have an account.">
+            <Hyperlink fx:id="loginpageHyperlink" layoutX="368.0" layoutY="565.0" onAction="#goToLoginPage" text="I already have an account.">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
