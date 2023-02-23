@@ -13,14 +13,14 @@
 
 <AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NotecardsPageCodeBehind">
    <children>
-      <AnchorPane prefHeight="720.0" prefWidth="960.0">
+      <AnchorPane prefHeight="720.0" prefWidth="960.0" style="-fx-background-color: oldlace;">
          <children>
-            <Label layoutX="338.2" layoutY="28.0" text="My Notecards">
+            <Label layoutX="338.2" layoutY="28.0" text="My Notecards" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="48.0" />
                </font>
             </Label>
-            <MenuButton layoutX="824.0" layoutY="14.0" mnemonicParsing="false" text="Menu">
+            <MenuButton fx:id="menuMenuButton" layoutX="824.0" layoutY="14.0" mnemonicParsing="false" style="-fx-border-color: slategrey;" text="Menu" textFill="DARKSLATEGRAY">
               <items>
                 <MenuItem fx:id="notecardsMenuItem" mnemonicParsing="false" onAction="#goToNotecardsPage" text="Notecards" />
                 <MenuItem fx:id="setsMenuItem" mnemonicParsing="false" onAction="#goToSetsPage" text="Sets" />
@@ -34,42 +34,42 @@
                   <Font name="Cambria" size="24.0" />
                </font>
             </MenuButton>
-            <Button fx:id="createNotecardButton" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#createNotecard" prefHeight="60.0" prefWidth="120.0" text="Create&#10;Notecard" textAlignment="CENTER">
+            <Button fx:id="createNotecardButton" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#createNotecard" prefHeight="60.0" prefWidth="120.0" style="-fx-border-color: slategrey;" text="Create&#10;Notecard" textAlignment="CENTER" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="viewNotecardButton" disable="true" layoutX="217.0" layoutY="150.0" mnemonicParsing="false" onAction="#viewNotecard" prefHeight="60.0" prefWidth="120.0" text="View&#10;Notecard" textAlignment="CENTER">
+            <Button fx:id="viewNotecardButton" layoutX="217.0" layoutY="150.0" mnemonicParsing="false" onAction="#viewNotecard" prefHeight="60.0" prefWidth="120.0" style="-fx-border-color: slategrey;" text="View&#10;Notecard" textAlignment="CENTER" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="editNotecardButton" disable="true" layoutX="420.0" layoutY="150.0" mnemonicParsing="false" onAction="#editNotecard" prefHeight="60.0" prefWidth="120.0" text="Edit&#10;Notecard" textAlignment="CENTER">
+            <Button fx:id="editNotecardButton" layoutX="420.0" layoutY="150.0" mnemonicParsing="false" onAction="#editNotecard" prefHeight="60.0" prefWidth="120.0" style="-fx-border-color: slategrey;" text="Edit&#10;Notecard" textAlignment="CENTER" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="deleteNotecardButton" disable="true" layoutX="623.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteNotecard" prefHeight="60.0" prefWidth="120.0" text="Delete&#10;Notecard" textAlignment="CENTER">
+            <Button fx:id="deleteNotecardButton" layoutX="623.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteNotecard" prefHeight="60.0" prefWidth="120.0" style="-fx-border-color: slategrey;" text="Delete&#10;Notecard" textAlignment="CENTER" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addToSetButton" disable="true" layoutX="826.0" layoutY="150.0" mnemonicParsing="false" onAction="#addNotecardToSet" prefHeight="60.0" prefWidth="120.0" text="Add&#10;to Set" textAlignment="CENTER">
+            <Button fx:id="addToSetButton" layoutX="826.0" layoutY="150.0" mnemonicParsing="false" onAction="#addNotecardToSet" prefHeight="60.0" prefWidth="120.0" style="-fx-border-color: slategrey;" text="Add&#10;to Set" textAlignment="CENTER" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="notecardsSearchBarTextField" layoutX="14.0" layoutY="230.0" prefHeight="46.0" prefWidth="817.0" promptText="Search...">
+            <TextField fx:id="notecardsSearchBarTextField" layoutX="14.0" layoutY="230.0" prefHeight="46.0" prefWidth="817.0" promptText="Search..." style="-fx-border-color: slategrey;">
                <font>
                   <Font name="Cambria" size="24.0" />
                </font>
             </TextField>
-            <Button fx:id="notecardsSearchButton" layoutX="844.8" layoutY="230.0" mnemonicParsing="false" onAction="#searchNotecards" text="Search">
+            <Button fx:id="notecardsSearchButton" layoutX="844.8" layoutY="230.0" mnemonicParsing="false" onAction="#searchNotecards" style="-fx-border-color: slategrey;" text="Search" textFill="DARKSLATEGRAY">
                <font>
                   <Font name="Cambria" size="24.0" />
                </font>
             </Button>
-            <TableView fx:id="notecardsTableView" layoutX="14.0" layoutY="292.0" prefHeight="413.0" prefWidth="932.0">
+            <TableView fx:id="notecardsTableView" layoutX="14.0" layoutY="292.0" prefHeight="413.0" prefWidth="932.0" style="-fx-border-color: slategrey;">
               <columns>
                 <TableColumn fx:id="termTableColumn" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Term" />
                 <TableColumn fx:id="definitionTableColumn" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Definition" />
