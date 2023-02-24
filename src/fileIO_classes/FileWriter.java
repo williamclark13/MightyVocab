@@ -11,7 +11,7 @@ public class FileWriter {
 	private File userFile;
 	
 	public FileWriter() {
-		this.userFile = new File("../users.txt");
+		this.userFile = new File("users.txt");
 	}
 	
 	public void write(List<User> users) throws FileNotFoundException {
