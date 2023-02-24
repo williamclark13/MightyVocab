@@ -63,9 +63,7 @@ public class LoginPageCodeBehind {
 
 	@FXML
 	void checkForUser(ActionEvent event) {
-		
 		this.viewModel.check();
-		
 	}
 
 }

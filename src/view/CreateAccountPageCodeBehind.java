@@ -41,7 +41,7 @@ public class CreateAccountPageCodeBehind {
 
 	@FXML
 	private void initialize() {
-		
+
 		this.bindToLoginViewModel();
 	}
 
@@ -53,10 +53,15 @@ public class CreateAccountPageCodeBehind {
 	@FXML
 	void goToLoginPage(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
-		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	@FXML
+	void addUserToText(ActionEvent event) {
+		this.viewModel.createUserAccount();
 	}
 
 }
