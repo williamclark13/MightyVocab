@@ -16,7 +16,7 @@ public class MightyVocabApplication extends Application {
 			Pane pane = loader.load();
 			Scene scene = new Scene(pane);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("MightyVocab Application");
+			primaryStage.setTitle("MightyVocab");
 			primaryStage.show();
 		} catch (Exception ex) {
 			ex.printStackTrace();
