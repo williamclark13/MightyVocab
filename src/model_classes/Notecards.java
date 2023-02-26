@@ -3,9 +3,6 @@ package model_classes;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 public class Notecards {
 	private List<Notecard> notecards;
 
