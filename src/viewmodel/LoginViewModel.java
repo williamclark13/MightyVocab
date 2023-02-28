@@ -36,11 +36,8 @@ public class LoginViewModel {
 		return this.labelProperty;
 	}
 
-	
-	// If on Create Account page then on button press create method to handle adding
-	// username and password to file
-
-	public void check() {
+	public void checkUserExists() {
+		// Working as login check. Need other view components to complete login functionality
 		if (users != null) {
 			for (User currentUser : users) {
 				if (currentUser.verifyCredentials(usernameProperty.get(), passwordProperty.get())) {
