@@ -21,6 +21,10 @@ public class Notecards {
 	public List<Notecard> getNotecards() {
 		return this.notecards;
 	}
+	
+	public void setNotecards(ArrayList<Notecard> notecards) {
+		this.notecards = notecards;
+	}
 
 	/**
 	 * Get the amount of notecards
@@ -81,5 +85,15 @@ public class Notecards {
 			return false;
 		}
 		return this.notecards.removeAll(unwantedNotecards);
+	}
+
+	/***
+	 * Get the notecard by the index
+	 * 
+	 * @param notecardIndex
+	 * @return notecard
+	 */
+	public Notecard getNotecardByIndex(int notecardIndex) {
+		return this.notecards.get(notecardIndex);
 	}
 }
