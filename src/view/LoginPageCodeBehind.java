@@ -14,10 +14,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import viewmodel.LoginViewModel;
 
 public class LoginPageCodeBehind {
 
-	private Stage stage;
+	private LoginViewModel viewModel;
+  	private Stage stage;
 	private Scene scene;
 	private Parent root;
 
@@ -37,17 +39,30 @@ public class LoginPageCodeBehind {
 	private TextField usernameTextField;
 
 	public LoginPageCodeBehind() {
-
+		this.viewModel = new LoginViewModel();
 	}
 
 	@FXML
 	private void initialize() {
+		this.bindToLoginViewModel();
+		this.invalidCredentialsLabel.visibleProperty().set(true);
+	}
+
+	private void bindToLoginViewModel() {
+		this.usernameTextField.textProperty().bindBidirectional(this.viewModel.usernameProperty());
+		this.passwordPasswordField.textProperty().bindBidirectional(this.viewModel.passwordProperty());
+		this.invalidCredentialsLabel.textProperty().bindBidirectional(this.viewModel.labelProperty());
 
 	}
 
 	@FXML
-	void userLogin(ActionEvent event) throws IOException {
+	void goToCreateAccountPage(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("../view/CreateAccountPage.fxml"));
+		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		Scene scene = new Scene(root);
+  }
 
+	void userLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("NotecardsPage.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
@@ -56,13 +71,15 @@ public class LoginPageCodeBehind {
 	}
 
 	@FXML
+	void checkForUser(ActionEvent event) {
+		this.viewModel.checkUserExists();
+  }
+  
 	void goToCreateAccountPage(ActionEvent event) throws IOException {
-
 		root = FXMLLoader.load(getClass().getResource("CreateAccountPage.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}
-
 }
