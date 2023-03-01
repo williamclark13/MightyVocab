@@ -34,7 +34,7 @@ public class Notecard {
 	 * 
 	 * @param term
 	 */
-	private void setTerm(String term) {
+	public void setTerm(String term) {
 		if (term == null) {
 			throw new IllegalArgumentException("Term cannot be null.");
 		}
@@ -58,7 +58,7 @@ public class Notecard {
 	 * 
 	 * @param description
 	 */
-	private void setDefinition(String definition) {
+	public void setDefinition(String definition) {
 		if (definition == null) {
 			throw new IllegalArgumentException("Definition cannot be null.");
 		}
