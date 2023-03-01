@@ -68,6 +68,7 @@ public class LoginPageCodeBehind {
 		this.viewModel.checkUserExists();
 	}
 
+	@FXML
 	void goToCreateAccountPage(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("CreateAccountPage.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
