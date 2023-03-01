@@ -12,7 +12,7 @@ public class FileReader {
 	private File userFile;
 
 	public FileReader() {
-		this.userFile = new File("INPUT FILE LOCATION");
+		this.userFile = new File("users.txt");
 	}
 
 	public List<User> loadUsersFromFile() throws FileNotFoundException {
@@ -27,7 +27,6 @@ public class FileReader {
 				User user = this.createUser(values);
 
 				users.add(user);
-
 			}
 		}
 		return users;

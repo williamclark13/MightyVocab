@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="393.0" prefWidth="274.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StatisticsPageCodeBehind">
+   <children>
+      <AnchorPane prefHeight="393.0" prefWidth="295.0">
+         <children>
+            <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="298.0">
+              <menus>
+                <Menu mnemonicParsing="false" onAction="#goToNotecards" text="Notecards" />
+                <Menu mnemonicParsing="false" onAction="#goToSets" text="Sets" />
+                <Menu mnemonicParsing="false" onAction="#goToStudy" text="Study" />
+                  <Menu mnemonicParsing="false" onAction="#goToStats" text="Stats" />
+                  <Menu mnemonicParsing="false" onAction="#goToLogout" text="Logout" />
+              </menus>
+            </MenuBar>
+            <Label fx:id="usernameLabel" layoutX="58.0" layoutY="63.0" prefHeight="17.0" prefWidth="182.0" text="(username}'s Statistic">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="studyTimeTotalLabel" layoutX="36.0" layoutY="125.0" text="Study Time (total): 00:00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="studyTimeCurrentLabel" layoutX="36.0" layoutY="161.0" text="Study Time (current session): 00:00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="accuracyRateLabel" layoutX="36.0" layoutY="228.0" text="Accuracy Rate: 00.0%">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="numberNotecardsLabel" layoutX="36.0" layoutY="292.0" text="No. Notecards: 0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="numberSetsLabel" layoutX="36.0" layoutY="316.0" text="No. Sets: 0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="refreshButton" layoutX="212.0" layoutY="38.0" mnemonicParsing="false" onAction="#refreshStatisticsPage" text="Refresh">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
