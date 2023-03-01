@@ -36,15 +36,16 @@ public class LoginViewModel {
 		return this.labelProperty;
 	}
 
-	public void checkUserExists() {
-		// Working as login check. Need other view components to complete login functionality
+	public boolean checkUserExists() {
 		if (users != null) {
 			for (User currentUser : users) {
 				if (currentUser.verifyCredentials(usernameProperty.get(), passwordProperty.get())) {
-					this.labelProperty.set("User exists");
+					return true;
 				}
 			}
 		}
+		this.labelProperty.set("User does not exist, please create an account.");
+		return false;
 	}
 
 	public void loadUsers() {
@@ -67,7 +68,7 @@ public class LoginViewModel {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void addUser() {
 		String username = this.usernameProperty.get();
 		String password = this.passwordProperty.get();

@@ -64,8 +64,15 @@ public class LoginPageCodeBehind {
 	}
 
 	@FXML
-	void checkForUser(ActionEvent event) {
-		this.viewModel.checkUserExists();
+	void checkForUser(ActionEvent event) throws IOException {
+		
+		if (this.viewModel.checkUserExists()) {
+			root = FXMLLoader.load(getClass().getResource("NotecardsPage.fxml"));
+			stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+		}	
 	}
 
 	@FXML

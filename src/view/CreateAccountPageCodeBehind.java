@@ -52,6 +52,7 @@ public class CreateAccountPageCodeBehind {
 	private void bindToLoginViewModel() {
 		this.usernameTextField.textProperty().bindBidirectional(this.viewModel.usernameProperty());
 		this.passwordPasswordField.textProperty().bindBidirectional(this.viewModel.passwordProperty());
+		this.invalidCredentialsLabel.textProperty().bindBidirectional(this.viewModel.labelProperty());
 	}
 
 	@FXML
