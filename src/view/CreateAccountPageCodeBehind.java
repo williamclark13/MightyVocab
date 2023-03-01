@@ -19,11 +19,10 @@ import viewmodel.LoginViewModel;
 public class CreateAccountPageCodeBehind {
 
 	private LoginViewModel viewModel;
-  private Stage stage;
+
+	private Stage stage;
 	private Scene scene;
 	private Parent root;
-
-public class CreateAccountPageCodeBehind {
 
 	@FXML
 	private Button createAccountButton;
@@ -53,15 +52,6 @@ public class CreateAccountPageCodeBehind {
 	private void bindToLoginViewModel() {
 		this.usernameTextField.textProperty().bindBidirectional(this.viewModel.usernameProperty());
 		this.passwordPasswordField.textProperty().bindBidirectional(this.viewModel.passwordProperty());
-	}
-
-	@FXML
-	void goToLoginPage(ActionEvent event) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
-		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
 	}
 
 	@FXML

@@ -19,7 +19,7 @@ import viewmodel.LoginViewModel;
 public class LoginPageCodeBehind {
 
 	private LoginViewModel viewModel;
-  	private Stage stage;
+	private Stage stage;
 	private Scene scene;
 	private Parent root;
 
@@ -55,13 +55,6 @@ public class LoginPageCodeBehind {
 
 	}
 
-	@FXML
-	void goToCreateAccountPage(ActionEvent event) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("../view/CreateAccountPage.fxml"));
-		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		Scene scene = new Scene(root);
-  }
-
 	void userLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("NotecardsPage.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -73,8 +66,8 @@ public class LoginPageCodeBehind {
 	@FXML
 	void checkForUser(ActionEvent event) {
 		this.viewModel.checkUserExists();
-  }
-  
+	}
+
 	void goToCreateAccountPage(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("CreateAccountPage.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
