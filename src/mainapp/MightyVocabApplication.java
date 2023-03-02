@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class MightyVocabApplication extends Application {
-
+//vm arguments: --module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules javafx.controls,javafx.fxml
 	@Override
 	public void start(Stage primaryStage) {
 		try {

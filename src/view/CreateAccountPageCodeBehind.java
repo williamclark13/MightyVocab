@@ -14,8 +14,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import viewmodel.LoginViewModel;
 
 public class CreateAccountPageCodeBehind {
+
+	private LoginViewModel viewModel;
 
 	private Stage stage;
 	private Scene scene;
@@ -37,12 +40,24 @@ public class CreateAccountPageCodeBehind {
 	private TextField usernameTextField;
 
 	public CreateAccountPageCodeBehind() {
-
+		this.viewModel = new LoginViewModel();
 	}
 
 	@FXML
 	private void initialize() {
 
+		this.bindToLoginViewModel();
+	}
+
+	private void bindToLoginViewModel() {
+		this.usernameTextField.textProperty().bindBidirectional(this.viewModel.usernameProperty());
+		this.passwordPasswordField.textProperty().bindBidirectional(this.viewModel.passwordProperty());
+		this.invalidCredentialsLabel.textProperty().bindBidirectional(this.viewModel.labelProperty());
+	}
+
+	@FXML
+	void addUserToText(ActionEvent event) {
+		this.viewModel.createUserAccount();
 	}
 
 	@FXML

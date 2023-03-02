@@ -71,8 +71,8 @@
             </Button>
             <TableView fx:id="notecardsTableView" layoutX="14.0" layoutY="292.0" prefHeight="413.0" prefWidth="932.0" style="-fx-border-color: slategrey;">
               <columns>
-                <TableColumn fx:id="termTableColumn" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Term" />
-                <TableColumn fx:id="definitionTableColumn" editable="false" prefWidth="75.0" sortType="DESCENDING" text="Definition" />
+                <TableColumn fx:id="termTableColumn" editable="false" prefWidth="125" sortType="DESCENDING" text="Term" />
+                <TableColumn fx:id="definitionTableColumn" editable="false" prefWidth="325.0" sortType="DESCENDING" text="Definition" />
               </columns>
             </TableView>
          </children>

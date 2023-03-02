@@ -1,16 +1,16 @@
 package model_classes;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Notecards {
-	private ObservableList<Notecard> notecards;
+	private List<Notecard> notecards;
 
 	/**
 	 * Instantiates an instance of a collectible of notecard
 	 */
 	public Notecards() {
-		this.notecards = FXCollections.observableArrayList();
+		this.notecards = new ArrayList<Notecard>();
 	}
 
 	/**
@@ -18,8 +18,12 @@ public class Notecards {
 	 * 
 	 * @return get the notecards
 	 */
-	public ObservableList<Notecard> getNotecards() {
+	public List<Notecard> getNotecards() {
 		return this.notecards;
+	}
+	
+	public void setNotecards(ArrayList<Notecard> notecards) {
+		this.notecards = notecards;
 	}
 
 	/**
@@ -50,7 +54,7 @@ public class Notecards {
 	 * @param notecard
 	 * @return true if successfully added, false otherwise
 	 */
-	public boolean addNotecards(ObservableList<Notecard> notecards) {
+	public boolean addNotecards(List<Notecard> notecards) {
 		if (notecards == null) {
 			return false;
 		}
@@ -76,10 +80,20 @@ public class Notecards {
 	 * @param unwantedNotecards
 	 * @return true if removed, false otherwise
 	 */
-	public boolean removeNotecards(ObservableList<Notecard> unwantedNotecards) {
+	public boolean removeNotecards(List<Notecard> unwantedNotecards) {
 		if (unwantedNotecards == null) {
 			return false;
 		}
 		return this.notecards.removeAll(unwantedNotecards);
+	}
+
+	/***
+	 * Get the notecard by the index
+	 * 
+	 * @param notecardIndex
+	 * @return notecard
+	 */
+	public Notecard getNotecardByIndex(int notecardIndex) {
+		return this.notecards.get(notecardIndex);
 	}
 }

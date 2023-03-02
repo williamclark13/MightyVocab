@@ -36,7 +36,7 @@ public class User {
 	 * @param username
 	 * @return true if username is being set
 	 */
-	public boolean setUsername(String username) {
+	private boolean setUsername(String username) {
 		if (username == null) {
 			throw new IllegalArgumentException("Username cannot be null.");
 		}
@@ -62,7 +62,7 @@ public class User {
 	 * @param password
 	 * @return true if password is being set
 	 */
-	public boolean setPassword(String password) {
+	private boolean setPassword(String password) {
 		if (password == null) {
 			throw new IllegalArgumentException("Password cannot be null.");
 		}
@@ -82,5 +82,10 @@ public class User {
 	 */
 	public boolean verifyCredentials(String username, String password) {
 		return this.username.equals(username) && this.password.equals(password);
+	}
+	
+	@Override
+	public String toString() {
+		return this.username + resources.ResourceMessages.SEPARATOR + this.password;
 	}
 }
